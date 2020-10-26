@@ -543,7 +543,7 @@
 <div>
 <h3 contenteditable="true" data-element="title"><span class="i1"><span class="i1"><span class="component"><span class="imagewrap"><span class="image">                              <img alt="Photograph of four converters stacked on top of each other. The two converters in the middle are identical. They are each labeled Black Box and have a power cord receptacle, an Ethernet port and two other ports. The converter on the top has an Ethernet port and two other ports. The converter on the bottom has an Ethernet port and two other ports." class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH11/webcontent/PCH11/image11.png" title="Photograph of four converters stacked on top of each other. The two converters in the middle are identical. They are each labeled Black Box and have a power cord receptacle, an Ethernet port and two other ports. The converter on the top has an Ethernet port and two other ports. The converter on the bottom has an Ethernet port and two other ports."/><span>                             </span></span><span class="caption" lang=""></span></span></span></span></span></h3>
 <p id="N10683" lang="" style="text-align: center;">Media converters. Photo used under CC-BY-NC license from<span> Adrian Black</span>.</p>
-<p lang="" style="text-align: center;"><span>媒體轉換器。照片由</span><a href="https://flic.kr/p/39UoP8" id="_i_1" lang="" target="_blank"><span><span>Adrian Black</span></span></a><span><span>根據CC-BY-NC許可使用</span><span>。</span></span></p>
+<p lang="" style="text-align: center;"><span>媒體轉換器。照片由Adrian Black</span><span><span>根據CC-BY-NC許可使用</span><span>。</span></span></p>
 <h2 style="text-align: left;">PCH14</h2>
 <h3>Overview</h3>
 <p>In this lesson, we will discuss transmission control protocol (TCP) and user datagram protocol (UDP), as well as their associated ports and protocols. We will specifically address the various email ports and protocols in use today, as well as discussing secure sockets layer/transport layer security (SSL/TLS) in the context of web security. Then, we will discuss file transfer protocol (FTP) and hypertext transfer protocol (HTTP) and their use on the Internet today, as well as some older technologies such as Telnet and its more secure alternative, secure shell (SSH).</p>
@@ -551,28 +551,255 @@
 <p><span>在本課程中，我們將討論傳輸控制協議（TCP）和用戶數據報協議（UDP），以及它們相關的端口和協議。</span><span>我們將專門解決當今使用的各種電子郵件端口和協議，並在Web安全的背景下討論安全套接字層/傳輸層安全（SSL / TLS）。</span><span>然後，我們將討論文件傳輸協議（FTP）和超文本傳輸協議（HTTP）及其在當今Internet上的使用，以及一些較老的技術，例如Telnet及其更安全的替代方法，安全外殼（SSH）。</span></p>
 <h3>TCP and UDP</h3>
 <p id="N106A0" lang="">TCP is a connection-oriented protocol that ensures the reliable transport of data segments from one device to another. During transmission, if a segment is dropped, it will be detected and resent or retransmitted by the originator device. Each communication is acknowledged upon receipt, providing a secure model to ensure successful communications. This type of transmission is great for all network data types, especially those that need delivery to be assured.</p>
+<p lang=""><span>TCP是一種面向連接的協議，可確保將數據段從一台設備可靠地傳輸到另一台設備。</span><span>在傳輸過程中，如果某個段丟失，則發起方設備將檢測到該段並將其重新發送或重新發送。</span><span>每次通信在收到後都會得到確認，從而提供一個安全的模型來確保成功進行通信。</span><span>這種傳輸方式適用於所有網絡數據類型，尤其是那些需要確保傳輸的網絡數據類型。</span></p>
 <p id="N106A3" lang="">When a TCP communication is initiated, the originator and receiver perform a “three-way handshake” before starting the data transmission. In the first step, the originator sends a packet with a synchronization (SYN) flag set. Next, the receiver acknowledges receipt of this SYN flagged packet by sending back a synchronization-acknowledged (SYN-ACK) flagged packet. Finally, the originator sends an acknowledgement of the synchronization-acknowledged flagged packet, and then data transmission occurs.</p>
+<p lang=""><span>啟動TCP通信時，發起方和接收方在開始數據傳輸之前執行“三向握手”。</span><span>第一步，發起方發送一個設置了同步（SYN）標誌的數據包。</span><span>接下來，接收器通過發回同步確認（SYN-ACK）標記的數據包來確認此SYN標記的數據包的接收。</span><span>最後，始發者發送對已同步確認的標記數據包的確認，然後發生數據傳輸。</span></p>
 <div class="examplewrap">
 <div class="exHead"><span class="scnReader">EXAMPLE</span></div>
 <div class="example clearfix">
-<h5></h5>
-<div>
 <p id="N106A8" lang="">Think of this like two students who want to discuss an important project that is upcoming. The first student, Bob, says to Jane, “Jane, I want to talk to you.” Next, Jane says, “Bob, I acknowledge that you want to talk to me and I am ready to listen.” Finally, Bob tells her, “Jane, I understand you are ready to listen. Let’s talk.” At this point, the two students can talk, knowing they are both ready to listen to each other.</p>
+<div class="example clearfix">
+<div>
+<p lang=""><span><span>例</span></span></p>
+<p id="N106A8" lang=""><span><span>就像兩個想討論即將開展的重要項目的學生一樣。</span><span>第一位學生鮑勃對簡說：“簡，我想和你說話。”<span> </span></span><span>接下來，簡說：“鮑勃，我承認你想和我說話，我已經準備好傾聽。”<span> </span></span><span>最後，鮑勃告訴她：“簡，我知道你已經準備好聽了。</span><span>讓我們談談。”<span> </span></span><span>此時，兩個學生可以交談，知道他們倆都準備好了互相傾聽。</span></span></p>
+</div>
+</div>
 <span class="imagewrap"><span class="imagewrap"><span class="image"><img class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH14/webcontent/PCH14/image1.png"/></span><span class="caption" lang=""></span></span></span>
 <p id="N106AF" lang="">Diagram of TCP three-way handshake. Image used under CC-BY license from National STEM  Consortium.</p>
 </div>
 </div>
-</div>
 <p id="N106B8" lang="">UDP, or user datagram protocol, was developed as a connectionless protocol in order to increase the speed of the network over TCP transmissions. Because of the three-way handshake in TCP, as well as all the delivery assurance and quality control, TCP has a good amount of network overhead that slows down its communications. Network engineers realized that sometimes you don’t need delivery assurance or quality control. So UDP was established.</p>
+<p id="N106B8" lang=""><span>UDP（或用戶數據報協議）被開發為無連接協議，目的是通過TCP傳輸提高網絡速度。由於TCP中的三向握手以及所有的傳送保證和質量控制，TCP具有大量的網絡開銷，從而降低了其通信速度。網絡工程師意識到有時您不需要交付保證或質量控制。這樣就建立了UDP。</span></p>
 <p id="N106BB" lang="">UDP is considered unreliable, because if a segment is dropped during transmission, the sending device doesn’t know and doesn’t care. There is no retransmission. Once data is sent, it is gone. This is good, though, for audio and video streaming. In these applications, the data transferred is enormously large, and if a single segment is dropped it doesn’t affect the overall quality of the audio or video sent.</p>
+<p lang=""><span>UDP被認為是不可靠的，因為如果在傳輸過程中丟棄了一個網段，則發送設備將不知道也不在乎。</span><span>沒有重傳。</span><span>數據一旦發送，就消失了。</span><span>但是，這對於音頻和視頻流來說是很好的。</span><span>在這些應用程序中，傳輸的數據非常大，如果丟棄單個段，則不會影響所發送的音頻或視頻的整體質量。</span></p>
 <div class="examplewrap">
 <div class="exHead"><span class="scnReader">EXAMPLE</span></div>
 <div class="example clearfix">
-<h5></h5>
-<div>
 <p id="N106C0" lang="">I like to think of UDP as my college calculus teacher. He started at one side of the board at 8 a.m., and by 9 a.m. he was done at the other side of the board. He never asked if the students understood what he said or wrote, he just kept transmitting. This is a great example of UDP.</p>
+<div class="example clearfix">
+<div>
+<p lang=""><span><span>例</span></span></p>
+<p id="N106C0" lang=""><span><span>我喜歡將UDP視為我的大學微積分老師。</span><span>他在上午8點從董事會的一側開始，到上午9點，他在董事會的另一側完成了工作。</span><span>他從不問學生是否理解他所說或寫的內容，他只是不斷地傳播。</span><span>這是UDP的一個很好的例子。</span></span></p>
+</div>
+</div>
 <span class="imagewrap"><span class="imagewrap"><span class="image"><img class="popimg" id="_i_2" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH14/webcontent/PCH14/image2.png"/></span><span class="caption" lang=""></span></span></span>
-<p id="N106C7" lang="">Diagram of UDP transmission. Image used under CC-BY license from<span> National STEM Consortium.</span>.</p>
+<p id="N106C7" lang="">Diagram of UDP transmission. Image used under CC-BY license from<span> National STEM Consortium.</span></p>
+<h3><span title="Quick scroll up">TCP Vs. UDP</span></h3>
+<p id="N106D7" lang="">TCP and UDP have many differences. TCP is reliable, but UDP is unreliable. TCP focuses on connection-oriented communications using the three-way handshake, while UDP is connectionless. TCP uses windowing, discussed in more detail later, to control the amount of data sent at a given time based on changing network speeds, but UDP simply transmits everything once with no windowing. TCP also supports segment sequencing; UDP just hopes it gets to the destination in the right order. Finally, TCP waits for acknowledgements, but UDP just hopes it got there. To simplify it, TCP is an assured and reliable communication method, UDP is just a best-effort model.</p>
+<p lang=""><span style="color: #ff0000;" title="快速向上滾動">TCPVs。UDP協議</span></p>
+<p id="N106D7" lang=""><span><span>TCP和UDP有很多區別。</span><span>TCP是可靠的，但UDP是不可靠的。</span><span>TCP專注於使用三向握手的面向連接的通信，而UDP是無連接的。</span><span>TCP使用開窗（稍後將詳細討論）來基於不斷變化的網絡速度來控制在給定時間發送的數據量，但是UDP僅傳輸所有信息一次而沒有開窗。</span><span>TCP還支持段排序；</span><span>UDP只是希望它以正確的順序到達目的地。</span><span>最後，TCP等待確認，但是UDP只是希望它到達目的地。</span><span>為簡化起見，TCP是一種有保證且可靠的通信方法，UDP只是一種盡力而為的模型。</span></span></p>
+</div>
+</div>
+<div class="section" id="N106D0">
+<div class="sectionContain">
+<div actguid="d87f2f670a0001dc7fae7e2bb7e1fe1e" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2f670a0001dc7fae7e2bb7e1fe1e&amp;userGUID=637491a10a0001dc1ed3f86a54aa7da0&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
+<div class="activitywrap purpose learnbydoing flash" id="dpch14_lbd01">
+<div class="actContain">
+<div class="activity flash">
+<div class="flash_obj asx testFlash" id="pch14_lbd01">
+<div class="page 482828 482829" id="opch14_lbd01">
+<div class="question" id="482828">
+<div>True or False: UDP is slower than TCP because UDP transmits everything at once with no windowing.</div>
+<div class="i1">
+<div class="component"><span class="radioContainer clearfix"><input id="582906_i1_rad_0" name="582906_i1_group" type="radio" value="A"/><label for="582906_i1_rad_0">True</label></span><span class="radioContainer clearfix"><input id="582906_i1_rad_1" name="582906_i1_group" type="radio" value="B"/><label for="582906_i1_rad_1">False</label></span></div>
+</div>
+<a alt="Click for hint" class="fa iconHint" href="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH14/x-oli-workbook_page/javascript();" rel="556732" title="Click for hint"></a></div>
+<div class="question" id="482829">
+<div>True or False: TCP is more reliable than UDP.</div>
+<div class="i1">
+<div class="component"><span class="radioContainer clearfix"><input id="582907_i1_rad_0" name="582907_i1_group" type="radio" value="A"/><label for="582907_i1_rad_0">True</label></span><span class="radioContainer clearfix"><input id="582907_i1_rad_1" name="582907_i1_group" type="radio" value="B"/><label for="582907_i1_rad_1">False</label></span></div>
+<div class="component"><span class="radioContainer clearfix"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div actguid="d87f2f680a0001dc695874177a8a648a" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2f680a0001dc695874177a8a648a&amp;userGUID=637491a10a0001dc1ed3f86a54aa7da0&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
+<div class="activitywrap purpose didigetthis flash" id="dpch14_digt01">
+<div class="activityhead"></div>
+<div class="actContain">
+<div class="activity flash">
+<div class="flash_obj asx testFlash" id="pch14_digt01">
+<div class="page 482854 482855" id="opch14_digt01">
+<div class="question" id="482854">
+<div>Golda needs to stream large amounts of video quickly. Which protocol would best meet Golda’s needs?</div>
+<div class="i1">
+<div class="component"><span class="radioContainer clearfix"><input id="582942_i1_rad_0" name="582942_i1_group" type="radio" value="A"/><label for="582942_i1_rad_0">TCP</label></span><span class="radioContainer clearfix"><input id="582942_i1_rad_1" name="582942_i1_group" type="radio" value="B"/><label for="582942_i1_rad_1">UDP</label></span><span class="radioContainer clearfix"><input id="582942_i1_rad_2" name="582942_i1_group" type="radio" value="C"/><label for="582942_i1_rad_2">ADP</label></span><span class="radioContainer clearfix"><input id="582942_i1_rad_3" name="582942_i1_group" type="radio" value="D"/><label for="582942_i1_rad_3">None of the above.</label></span></div>
+</div>
+</div>
+<div class="question ddfb" id="482855">
+<p id="N1007C" lang="">Using the dropdown menus, select the protocol that best fits the description.</p>
+<p id="N1007F" lang="">Connection oriented:<span> </span><span class="i1"> <span class="component"><select id="i1">
+<option id="i1_EMPTY_CHOICE" value="">--</option>
+<option id="i1_opt_0" value="A">TCP</option>
+<option id="i1_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N10084" lang="">Connectionless:<span> </span><span class="i2"> <span class="component"><select id="i2">
+<option id="i2_EMPTY_CHOICE" value="">--</option>
+<option id="i2_opt_0" value="A">TCP</option>
+<option id="i2_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N10089" lang="">No windowing or retransmission:<span> </span><span class="i3"> <span class="component"><select id="i3">
+<option id="i3_EMPTY_CHOICE" value="">--</option>
+<option id="i3_opt_0" value="A">TCP</option>
+<option id="i3_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N1008E" lang="">No sequencing:<span> </span><span class="i4"> <span class="component"><select id="i4">
+<option id="i4_EMPTY_CHOICE" value="">--</option>
+<option id="i4_opt_0" value="A">TCP</option>
+<option id="i4_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N10093" lang="">Acknowledge segments:<span> </span><span class="i5"> <span class="component"><select id="i5">
+<option id="i5_EMPTY_CHOICE" value="">--</option>
+<option id="i5_opt_0" value="A">TCP</option>
+<option id="i5_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N10098" lang="">Segment sequencing:<span> </span><span class="i6"> <span class="component"><select id="i6">
+<option id="i6_EMPTY_CHOICE" value="">--</option>
+<option id="i6_opt_0" value="A">TCP</option>
+<option id="i6_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N1009D" lang="">Segment retransmission and flow control through windowing:<span> </span><span class="i7"> <span class="component"><select id="i7">
+<option id="i7_EMPTY_CHOICE" value="">--</option>
+<option id="i7_opt_0" value="A">TCP</option>
+<option id="i7_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N100A2" lang="">No acknowledgements:<span> </span><span class="i8"> <span class="component"><select id="i8">
+<option id="i8_EMPTY_CHOICE" value="">--</option>
+<option id="i8_opt_0" value="A">TCP</option>
+<option id="i8_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<h3><span class="i8"><span class="component">TCP Windowing</span></span></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tcp_windowing">
+<div class="sectionContain">
+<p id="N10722" lang="">TCP also supports a concept called windowing. If you have ever copied a file from a network share drive on the Windows operating system, you have seen windowing. Have you ever noticed when you copy a file over the network, it may start out saying there are “2 minutes remaining” until completion, then it jumps up to “3 hours remaining,” then back down to “30 minutes remaining”? This is TCP windowing in action.</p>
+<p id="N10725" lang="">Essentially, when a communication session is established with TCP, it first performs the three-way handshake. Next, it starts with a small window size, like windows size 1 in the image below, where a single segment is sent over the network and acknowledged. If this is successful, it increases the window size to 2, sending two segments at a time. It continues to do this, increasing the number of segments each time, transmitting more data in each window until an error occurs and retransmissions must be done. If errors occur, TCP understands that it must have been transmitting too fast, so it shrinks the window to slow down communication. As transmissions occur successfully, it again increases the window to push more data in each window. This window size is continually adjusted to get the most segments per window with the least errors in communication.</p>
+<span class="imagewrap"><span class="imagewrap"><span class="image"><img class="popimg" id="_i_4" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH14/webcontent/PCH14/image3.png"/></span><span class="caption" lang=""></span></span></span>
+<p id="N1072C" lang="">TCP windowing. Image used under CC-BY license from<span> </span><a href="http://www.nationalstem.org/" id="_i_5" lang="" target="_blank">National STEM Consortium</a>.</p>
+</div>
+</div>
+<div actguid="d87f2f5e0a0001dc1b677a5c838d016f" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2f5e0a0001dc1b677a5c838d016f&amp;userGUID=637491a10a0001dc1ed3f86a54aa7da0&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
+<div class="activitywrap purpose learnbydoing flash" id="dpch14_lbd02">
+<div class="activityhead">
+<div class="purposeType purposelearnbydoing" title=""><span class="scnReader">learn by doing</span></div>
+<div class="activityinfo"></div>
+</div>
+<div class="actContain">
+<div class="activity flash">
+<div class="flash_obj asx testFlash" id="pch14_lbd02">
+<div class="page 482806" id="opch14_lbd02">
+<div class="question" id="482806">
+<div>
+<p id="N10065" lang="">Put the steps of a TCP communication session in the correct order.</p>
+</div>
+<div class="i1">
+<div class="component ordering">
+<div>
+<ul>
+<li answervalue="7" draggable="true" id="i1_li_0">
+<div class="grip"></div>
+<div class="phContain">Segments two and three are acknowledged.</div>
+</li>
+<li answervalue="3" draggable="true" id="i1_li_1">
+<div class="grip"></div>
+<div class="phContain">A single segment (segment 1) is sent over the network.</div>
+</li>
+<li answervalue="1" draggable="true" id="i1_li_2">
+<div class="grip"></div>
+<div class="phContain">Three-way handshake.</div>
+</li>
+<li answervalue="5" draggable="true" id="i1_li_3">
+<div class="grip"></div>
+<div class="phContain">Window size 2 is established.</div>
+</li>
+<li answervalue="4" draggable="true" id="i1_li_4">
+<div class="grip"></div>
+<div class="phContain">Segment one is acknowledged.</div>
+</li>
+<li answervalue="2" draggable="true" id="i1_li_5">
+<div class="grip"></div>
+<div class="phContain">Window size 1 is established.</div>
+</li>
+<li answervalue="6" draggable="true" id="i1_li_6">
+<div class="grip"></div>
+<div class="phContain">Segments two and three are sent over the network.</div>
+</li>
+</ul>
+</div>
+<input type="button" value="Check My Answer"/></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pageControls clearfix" id="pagecontrols-d87f2f5e0a0001dc1b677a5c838d016f"><a alt="Click to reset all Hints, Feedback, and answers for this activity." class="btnReset" contextguids="d87f2f5e0a0001dc1b677a5c838d016f" id="reset-d87f2f5e0a0001dc1b677a5c838d016f"></a>Reset this Activity</div>
+</div>
+</div>
+</div>
+<div actguid="d87f2f5f0a0001dc1c968eeed73132fa" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2f5f0a0001dc1c968eeed73132fa&amp;userGUID=637491a10a0001dc1ed3f86a54aa7da0&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
+<div class="activitywrap purpose didigetthis flash" id="dpch14_digt02">
+<div class="activityhead">
+<div class="purposeType purposedidigetthis" title=""><span class="scnReader">did I get this</span></div>
+<div class="activityinfo"></div>
+</div>
+<div class="actContain">
+<div class="activity flash">
+<div class="flash_obj asx testFlash" id="pch14_digt02">
+<div class="page 482823" id="opch14_digt02">
+<div class="question" id="482823">
+<div>True or False: In TCP windowing, if an error occurs, TCP understands that it must have been transmitting too fast, so it shrinks the window to slow down communication.</div>
+<div class="i1">
+<div class="component"><span class="radioContainer clearfix"><input id="582901_i1_rad_0" name="582901_i1_group" type="radio" value="A"/><label for="582901_i1_rad_0">True</label></span><span class="radioContainer clearfix"><input id="582901_i1_rad_1" name="582901_i1_group" type="radio" value="B"/><label for="582901_i1_rad_1">False</label></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pageControls clearfix" id="pagecontrols-d87f2f5f0a0001dc1c968eeed73132fa"><a alt="Click to reset all Hints, Feedback, and answers for this activity." class="btnReset" contextguids="d87f2f5f0a0001dc1c968eeed73132fa" id="reset-d87f2f5f0a0001dc1c968eeed73132fa"></a>Reset this Activity</div>
+</div>
+</div>
+</div>
+<div class="activitywrap purpose checkpoint wbactivity">
+<div class="activityhead">
+<div class="purposeType purposecheckpoint" title=""><span class="scnReader">checkpoint</span></div>
+<div class="activityinfo"></div>
+</div>
+<div class="actContain">
+<div class="activity wbactivity" id="N10774">
+<p id="N10779" lang="">Take a minute to stop and reflect on your progress for this learning objective.</p>
+<div actguid="d87f2f620a0001dc225192ccfc0a4150" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2f620a0001dc225192ccfc0a4150&amp;userGUID=637491a10a0001dc1ed3f86a54aa7da0&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
+<div class="activitywrap compositeNest flash" id="dpch14_checkpoint1">
+<div class="activityhead">
+<div class="activityinfo"></div>
+</div>
+<div class="actContain">
+<div class="activity flash">
+<div class="flash_obj asx testFlash" id="pch14_checkpoint1">
+<div class="page 482594" id="opch14_checkpoint1">
+<div class="question" id="482594">
+<div>Do you feel comfortable with this material and ready to move on?</div>
+<div class="i1">
+<div class="component"><span class="radioContainer clearfix"><input id="582606_i1_rad_0" name="582606_i1_group" type="radio" value="A"/><label for="582606_i1_rad_0">Yes, I feel confident in my ability to meet this learning objective.</label></span><span class="radioContainer clearfix"><input id="582606_i1_rad_1" name="582606_i1_group" type="radio" value="B"/><label for="582606_i1_rad_1">No, I'd like to see some more material on this learning objective.</label></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

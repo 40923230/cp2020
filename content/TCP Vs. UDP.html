@@ -133,11 +133,95 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">PCH14 << <a href='PCH14.html'>Previous</a> <a href='TCP and UDP.html'>Next</a> >> TCP and UDP<br /><h1>Overview</h1>
-<p>In this lesson, we will discuss transmission control protocol (TCP) and user datagram protocol (UDP), as well as their associated ports and protocols. We will specifically address the various email ports and protocols in use today, as well as discussing secure sockets layer/transport layer security (SSL/TLS) in the context of web security. Then, we will discuss file transfer protocol (FTP) and hypertext transfer protocol (HTTP) and their use on the Internet today, as well as some older technologies such as Telnet and its more secure alternative, secure shell (SSH).</p>
-<p><span style="color: #ff0000;">概述</span></p>
-<p><span>在本課程中，我們將討論傳輸控制協議（TCP）和用戶數據報協議（UDP），以及它們相關的端口和協議。</span><span>我們將專門解決當今使用的各種電子郵件端口和協議，並在Web安全的背景下討論安全套接字層/傳輸層安全（SSL / TLS）。</span><span>然後，我們將討論文件傳輸協議（FTP）和超文本傳輸協議（HTTP）及其在當今Internet上的使用，以及一些較老的技術，例如Telnet及其更安全的替代方法，安全外殼（SSH）。</span></p>
-<br />PCH14 << <a href='PCH14.html'>Previous</a> <a href='TCP and UDP.html'>Next</a> >> TCP and UDP</div>
+    <div id="tipue_search_content">TCP and UDP << <a href='TCP and UDP.html'>Previous</a> <a href='TCP Windowing.html'>Next</a> >> TCP Windowing<br /><h1>TCP Vs. UDP</h1>
+<p id="N106D7" lang="">TCP and UDP have many differences. TCP is reliable, but UDP is unreliable. TCP focuses on connection-oriented communications using the three-way handshake, while UDP is connectionless. TCP uses windowing, discussed in more detail later, to control the amount of data sent at a given time based on changing network speeds, but UDP simply transmits everything once with no windowing. TCP also supports segment sequencing; UDP just hopes it gets to the destination in the right order. Finally, TCP waits for acknowledgements, but UDP just hopes it got there. To simplify it, TCP is an assured and reliable communication method, UDP is just a best-effort model.</p>
+<p lang=""><span style="color: #ff0000;" title="快速向上滾動">TCPVs。UDP協議</span></p>
+<p id="N106D7" lang=""><span><span>TCP和UDP有很多區別。</span><span>TCP是可靠的，但UDP是不可靠的。</span><span>TCP專注於使用三向握手的面向連接的通信，而UDP是無連接的。</span><span>TCP使用開窗（稍後將詳細討論）來基於不斷變化的網絡速度來控制在給定時間發送的數據量，但是UDP僅傳輸所有信息一次而沒有開窗。</span><span>TCP還支持段排序；</span><span>UDP只是希望它以正確的順序到達目的地。</span><span>最後，TCP等待確認，但是UDP只是希望它到達目的地。</span><span>為簡化起見，TCP是一種有保證且可靠的通信方法，UDP只是一種盡力而為的模型。</span></span></p>
+</div>
+</div>
+<div class="section" id="N106D0">
+<div class="sectionContain">
+<div actguid="d87f2f670a0001dc7fae7e2bb7e1fe1e" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2f670a0001dc7fae7e2bb7e1fe1e&amp;userGUID=637491a10a0001dc1ed3f86a54aa7da0&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
+<div class="activitywrap purpose learnbydoing flash" id="dpch14_lbd01">
+<div class="actContain">
+<div class="activity flash">
+<div class="flash_obj asx testFlash" id="pch14_lbd01">
+<div class="page 482828 482829" id="opch14_lbd01">
+<div class="question" id="482828">
+<div>True or False: UDP is slower than TCP because UDP transmits everything at once with no windowing.</div>
+<div class="i1">
+<div class="component"><span class="radioContainer clearfix"><input id="582906_i1_rad_0" name="582906_i1_group" type="radio" value="A"/><label for="582906_i1_rad_0">True</label></span><span class="radioContainer clearfix"><input id="582906_i1_rad_1" name="582906_i1_group" type="radio" value="B"/><label for="582906_i1_rad_1">False</label></span></div>
+</div>
+<a alt="Click for hint" class="fa iconHint" href="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH14/x-oli-workbook_page/javascript();" rel="556732" title="Click for hint"></a></div>
+<div class="question" id="482829">
+<div>True or False: TCP is more reliable than UDP.</div>
+<div class="i1">
+<div class="component"><span class="radioContainer clearfix"><input id="582907_i1_rad_0" name="582907_i1_group" type="radio" value="A"/><label for="582907_i1_rad_0">True</label></span><span class="radioContainer clearfix"><input id="582907_i1_rad_1" name="582907_i1_group" type="radio" value="B"/><label for="582907_i1_rad_1">False</label></span></div>
+<div class="component"><span class="radioContainer clearfix"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div actguid="d87f2f680a0001dc695874177a8a648a" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2f680a0001dc695874177a8a648a&amp;userGUID=637491a10a0001dc1ed3f86a54aa7da0&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
+<div class="activitywrap purpose didigetthis flash" id="dpch14_digt01">
+<div class="activityhead"></div>
+<div class="actContain">
+<div class="activity flash">
+<div class="flash_obj asx testFlash" id="pch14_digt01">
+<div class="page 482854 482855" id="opch14_digt01">
+<div class="question" id="482854">
+<div>Golda needs to stream large amounts of video quickly. Which protocol would best meet Golda’s needs?</div>
+<div class="i1">
+<div class="component"><span class="radioContainer clearfix"><input id="582942_i1_rad_0" name="582942_i1_group" type="radio" value="A"/><label for="582942_i1_rad_0">TCP</label></span><span class="radioContainer clearfix"><input id="582942_i1_rad_1" name="582942_i1_group" type="radio" value="B"/><label for="582942_i1_rad_1">UDP</label></span><span class="radioContainer clearfix"><input id="582942_i1_rad_2" name="582942_i1_group" type="radio" value="C"/><label for="582942_i1_rad_2">ADP</label></span><span class="radioContainer clearfix"><input id="582942_i1_rad_3" name="582942_i1_group" type="radio" value="D"/><label for="582942_i1_rad_3">None of the above.</label></span></div>
+</div>
+</div>
+<div class="question ddfb" id="482855">
+<p id="N1007C" lang="">Using the dropdown menus, select the protocol that best fits the description.</p>
+<p id="N1007F" lang="">Connection oriented:<span> </span><span class="i1"> <span class="component"><select id="i1">
+<option id="i1_EMPTY_CHOICE" value="">--</option>
+<option id="i1_opt_0" value="A">TCP</option>
+<option id="i1_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N10084" lang="">Connectionless:<span> </span><span class="i2"> <span class="component"><select id="i2">
+<option id="i2_EMPTY_CHOICE" value="">--</option>
+<option id="i2_opt_0" value="A">TCP</option>
+<option id="i2_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N10089" lang="">No windowing or retransmission:<span> </span><span class="i3"> <span class="component"><select id="i3">
+<option id="i3_EMPTY_CHOICE" value="">--</option>
+<option id="i3_opt_0" value="A">TCP</option>
+<option id="i3_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N1008E" lang="">No sequencing:<span> </span><span class="i4"> <span class="component"><select id="i4">
+<option id="i4_EMPTY_CHOICE" value="">--</option>
+<option id="i4_opt_0" value="A">TCP</option>
+<option id="i4_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N10093" lang="">Acknowledge segments:<span> </span><span class="i5"> <span class="component"><select id="i5">
+<option id="i5_EMPTY_CHOICE" value="">--</option>
+<option id="i5_opt_0" value="A">TCP</option>
+<option id="i5_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N10098" lang="">Segment sequencing:<span> </span><span class="i6"> <span class="component"><select id="i6">
+<option id="i6_EMPTY_CHOICE" value="">--</option>
+<option id="i6_opt_0" value="A">TCP</option>
+<option id="i6_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N1009D" lang="">Segment retransmission and flow control through windowing:<span> </span><span class="i7"> <span class="component"><select id="i7">
+<option id="i7_EMPTY_CHOICE" value="">--</option>
+<option id="i7_opt_0" value="A">TCP</option>
+<option id="i7_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<p id="N100A2" lang="">No acknowledgements:<span> </span><span class="i8"> <span class="component"><select id="i8">
+<option id="i8_EMPTY_CHOICE" value="">--</option>
+<option id="i8_opt_0" value="A">TCP</option>
+<option id="i8_opt_1" value="B">UDP</option>
+</select></span></span></p>
+<br />TCP and UDP << <a href='TCP and UDP.html'>Previous</a> <a href='TCP Windowing.html'>Next</a> >> TCP Windowing</div>
         
     <!-- footer -->
       <div class="container">
