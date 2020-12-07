@@ -133,42 +133,8 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Overview << <a href='Overview.html'>Previous</a> <a href='TCP Vs. UDP.html'>Next</a> >> TCP Vs. UDP<br /><h1>TCP and UDP</h1>
-<p id="N106A0" lang="">TCP is a connection-oriented protocol that ensures the reliable transport of data segments from one device to another. During transmission, if a segment is dropped, it will be detected and resent or retransmitted by the originator device. Each communication is acknowledged upon receipt, providing a secure model to ensure successful communications. This type of transmission is great for all network data types, especially those that need delivery to be assured.</p>
-<p lang=""><span>TCP是一種面向連接的協議，可確保將數據段從一台設備可靠地傳輸到另一台設備。</span><span>在傳輸過程中，如果某個段丟失，則發起方設備將檢測到該段並將其重新發送或重新發送。</span><span>每次通信在收到後都會得到確認，從而提供一個安全的模型來確保成功進行通信。</span><span>這種傳輸方式適用於所有網絡數據類型，尤其是那些需要確保傳輸的網絡數據類型。</span></p>
-<p id="N106A3" lang="">When a TCP communication is initiated, the originator and receiver perform a “three-way handshake” before starting the data transmission. In the first step, the originator sends a packet with a synchronization (SYN) flag set. Next, the receiver acknowledges receipt of this SYN flagged packet by sending back a synchronization-acknowledged (SYN-ACK) flagged packet. Finally, the originator sends an acknowledgement of the synchronization-acknowledged flagged packet, and then data transmission occurs.</p>
-<p lang=""><span>啟動TCP通信時，發起方和接收方在開始數據傳輸之前執行“三向握手”。</span><span>第一步，發起方發送一個設置了同步（SYN）標誌的數據包。</span><span>接下來，接收器通過發回同步確認（SYN-ACK）標記的數據包來確認此SYN標記的數據包的接收。</span><span>最後，始發者發送對已同步確認的標記數據包的確認，然後發生數據傳輸。</span></p>
-<div class="examplewrap">
-<div class="exHead"><span class="scnReader">EXAMPLE</span></div>
-<div class="example clearfix">
-<p id="N106A8" lang="">Think of this like two students who want to discuss an important project that is upcoming. The first student, Bob, says to Jane, “Jane, I want to talk to you.” Next, Jane says, “Bob, I acknowledge that you want to talk to me and I am ready to listen.” Finally, Bob tells her, “Jane, I understand you are ready to listen. Let’s talk.” At this point, the two students can talk, knowing they are both ready to listen to each other.</p>
-<div class="example clearfix">
-<div>
-<p lang=""><span><span>例</span></span></p>
-<p id="N106A8" lang=""><span><span>就像兩個想討論即將開展的重要項目的學生一樣。</span><span>第一位學生鮑勃對簡說：“簡，我想和你說話。”<span> </span></span><span>接下來，簡說：“鮑勃，我承認你想和我說話，我已經準備好傾聽。”<span> </span></span><span>最後，鮑勃告訴她：“簡，我知道你已經準備好聽了。</span><span>讓我們談談。”<span> </span></span><span>此時，兩個學生可以交談，知道他們倆都準備好了互相傾聽。</span></span></p>
-</div>
-</div>
-<span class="imagewrap"><span class="imagewrap"><span class="image"><img class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH14/webcontent/PCH14/image1.png"/></span><span class="caption" lang=""></span></span></span>
-<p id="N106AF" lang="">Diagram of TCP three-way handshake. Image used under CC-BY license from National STEM  Consortium.</p>
-</div>
-</div>
-<p id="N106B8" lang="">UDP, or user datagram protocol, was developed as a connectionless protocol in order to increase the speed of the network over TCP transmissions. Because of the three-way handshake in TCP, as well as all the delivery assurance and quality control, TCP has a good amount of network overhead that slows down its communications. Network engineers realized that sometimes you don’t need delivery assurance or quality control. So UDP was established.</p>
-<p id="N106B8" lang=""><span>UDP（或用戶數據報協議）被開發為無連接協議，目的是通過TCP傳輸提高網絡速度。由於TCP中的三向握手以及所有的傳送保證和質量控制，TCP具有大量的網絡開銷，從而降低了其通信速度。網絡工程師意識到有時您不需要交付保證或質量控制。這樣就建立了UDP。</span></p>
-<p id="N106BB" lang="">UDP is considered unreliable, because if a segment is dropped during transmission, the sending device doesn’t know and doesn’t care. There is no retransmission. Once data is sent, it is gone. This is good, though, for audio and video streaming. In these applications, the data transferred is enormously large, and if a single segment is dropped it doesn’t affect the overall quality of the audio or video sent.</p>
-<p lang=""><span>UDP被認為是不可靠的，因為如果在傳輸過程中丟棄了一個網段，則發送設備將不知道也不在乎。</span><span>沒有重傳。</span><span>數據一旦發送，就消失了。</span><span>但是，這對於音頻和視頻流來說是很好的。</span><span>在這些應用程序中，傳輸的數據非常大，如果丟棄單個段，則不會影響所發送的音頻或視頻的整體質量。</span></p>
-<div class="examplewrap">
-<div class="exHead"><span class="scnReader">EXAMPLE</span></div>
-<div class="example clearfix">
-<p id="N106C0" lang="">I like to think of UDP as my college calculus teacher. He started at one side of the board at 8 a.m., and by 9 a.m. he was done at the other side of the board. He never asked if the students understood what he said or wrote, he just kept transmitting. This is a great example of UDP.</p>
-<div class="example clearfix">
-<div>
-<p lang=""><span><span>例</span></span></p>
-<p id="N106C0" lang=""><span><span>我喜歡將UDP視為我的大學微積分老師。</span><span>他在上午8點從董事會的一側開始，到上午9點，他在董事會的另一側完成了工作。</span><span>他從不問學生是否理解他所說或寫的內容，他只是不斷地傳播。</span><span>這是UDP的一個很好的例子。</span></span></p>
-</div>
-</div>
-<span class="imagewrap"><span class="imagewrap"><span class="image"><img class="popimg" id="_i_2" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH14/webcontent/PCH14/image2.png"/></span><span class="caption" lang=""></span></span></span>
-<p id="N106C7" lang="">Diagram of UDP transmission. Image used under CC-BY license from<span> National STEM Consortium.</span></p>
-<br />Overview << <a href='Overview.html'>Previous</a> <a href='TCP Vs. UDP.html'>Next</a> >> TCP Vs. UDP</div>
+    <div id="tipue_search_content">HW2 << <a href='HW2.html'>Previous</a> <a href='HW3.html'>Next</a> >> HW3<br /><h1>1-1</h1>
+<br />HW2 << <a href='HW2.html'>Previous</a> <a href='HW3.html'>Next</a> >> HW3</div>
         
     <!-- footer -->
       <div class="container">
