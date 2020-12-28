@@ -596,7 +596,7 @@
 <h1>HW2</h1>
 <h2>1</h2>
 <h1>HW3</h1>
-<h2><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">15</span></span></h2>
+<h2>15</h2>
 <br/>Reverse Word Order<span> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/><span> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/><span> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/>
 <p><span style="color: #ff00ff;">倒序 <img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/> <img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/> <img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/></span></p>
 <div><i>strings</i></div>
@@ -667,8 +667,91 @@ Joining strings
 <pre><code class="language-pycon" data-lang="pycon">  a**b**c</code></pre>
 </figure>
 <h2>22</h2>
-<p>https://www.practicepython.org/exercise/2014/12/06/22-read-from-file.html</p>
-<h2>24</h2>
+<p>Read From File<span> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/></p>
+<div><i><span>從文件讀取<span> </span></span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/></i></div>
+<p>Exercise 22 (and<span> Solution</span>)</p>
+<p>練習22（和解決方案）</p>
+<p>Given a<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file that has a list of a bunch of names, count how many of each name there are in the file, and print out the results to the screen. I have a<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file for you, if you want to<span> use it</span>!</p>
+<p>給定一個.txt包含一堆名稱列表的文件，請計算該文件中每個名稱的數量，然後將結果打印到屏幕上。.txt如果您想使用它，我有一個文件供您使用！</p>
+<p>Extra</p>
+<p>額外</p>
+<ul>
+<li>Instead of using the<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file from above (or instead of, if you want the challenge), take<span> this .txt file</span>, and count how many of each “category” of each image there are. This text file is actually a list of files corresponding to the<span> SUN database</span><span> </span>scene recognition database, and lists the file directory hierarchy for the images. Once you take a look at the first line or two of the file, it will be clear which part represents the scene category. To do this, you’re going to have to remember a bit about string parsing in Python 3. I talked a little bit about it<span> in this post.</span></li>
+</ul>
+<p>不要使用.txt上面的文件（或者，如果您想挑戰，也可以使用該.txt文件），請使用此文件，併計算每個圖像的每個“類別”有多少個。該文本文件實際上是與SUN數據庫場景識別數據庫相對應的文件的列表，並且列出了圖像的文件目錄層次結構。查看文件的第一行或第二行後，將很清楚哪個部分代表場景類別。為此，您需要記住一些有關Python 3中的字符串解析的知識。我在本文中對此進行了一些討論。</p>
+<p>Discussion</p>
+<p><span>討論區</span></p>
+<p>Topics</p>
+<p>主題</p>
+<ol>
+<li>Reading a file</li>
+<li>Dictionaries</li>
+</ol>
+<p>1.讀取文件<br/>2.辭典</p>
+<p>Reading a File</p>
+<p>讀取文件</p>
+<p>Reading a file is very analogous to writing a file, as<span><span> </span>I discussed before in Exercise 21.</span> But, the best source is always the<span><span> </span>official Python 3.3 documentation.</span></p>
+<p><span>正如我之前在練習21中所討論的，讀取文件與寫入文件非常相似。但是，最好的來源始終是官方的Python 3.3文檔。</span></p>
+<p>Simply, reading to a file takes two steps<br/>簡單來說，讀取文件需要兩個步驟</p>
+<ol>
+<li>Opening the file for reading</li>
+<li>Read!</li>
+</ol>
+<p>1.打開文件進行讀取<br/>2.讀取！</p>
+<p>Opening a file for reading is the same as opening for writing, just using a different flag</p>
+<p>打開文件進行讀取與打開文件相同，只是使用一個不同的標誌</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
+    <span class="n">all_text</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></code></pre>
+</figure>
+<p>Note how the<span> </span><code class="highlighter-rouge">'r'</code><span> </span>flag stands for “read”. The code sample from above reads the entire<span> </span><code class="highlighter-rouge">open_file</code><span> </span>all at once into the<span> </span><code class="highlighter-rouge">all_text</code><span> </span>variable. But, this means that we now have a long string in<span> </span><code class="highlighter-rouge">all_text</code><span> </span>that can then be manipulated in Python using any string methods you want.</p>
+<p>請注意該'r'標誌代表“已讀”。上面的代碼示例open_file一次將全部讀取到了all_text變量中。但是，這意味著我們現在有了一個長字符串all_text，然後可以使用所需的任何字符串方法在Python中對其進行操作。</p>
+<p>Another way of reading data from the file is line by line</p>
+<p>從文件讀取數據的另一種方法是逐行</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
+  	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+  	<span class="k">while</span> <span class="n">line</span><span class="p">:</span>
+    	<span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span></code></pre>
+</figure>
+<p>Instead of<span> </span><code class="highlighter-rouge">print(line)</code>, you can imagine doing anything you want to the line of text… If you save it to a variable, you have a string that you can then use something like<span> </span><code class="highlighter-rouge">.strip()</code><span> </span>or<span> </span><code class="highlighter-rouge">.split()</code><span> </span>with.</p>
+<p>而不是print(line)，您可以想像對文本行進行任何操作...如果將其保存到變量中，則可以有一個字符串，然後可以使用諸如.strip()或.split()with之類的東西。</p>
+<p>Dictionaries</p>
+<p>辭典</p>
+<p>Dictionaries are Python’s way of associating two pieces of data together. The<span><span> </span>official documentation says it all.</span></p>
+<p><span>字典是Python將兩種數據關聯在一起的方式。在官方文件說明了一切。</span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">student_scores</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Adama'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'Starbuck'</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span> <span class="s">'Apollo'</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s">'Athena'</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s">'Agathon'</span><span class="p">:</span> <span class="mi">90</span><span class="p">}</span></code></pre>
+</figure>
+<p>The strings (or whatever happens to the left of the<span> </span><code class="highlighter-rouge">:</code><span> </span>sign), are called<span> </span><code class="highlighter-rouge">keys</code>. When I want to access the<span> </span><code class="highlighter-rouge">values</code><span> </span>(the things to the right of the<span> </span><code class="highlighter-rouge">:</code><span> </span>sign), I need to ask the dictionary for the value associated with the key</p>
+<p>字符串（或:符號左側發生的任何事情）稱為keys。當我想訪問values（:符號右邊的東西）時，我需要向字典查詢與該鍵關聯的值</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span></code></pre>
+</figure>
+<p>You can then modify the score and save it back to the dictionary</p>
+<p>然後，您可以修改分數並將其保存回字典</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span>
+  <span class="n">adama_score</span> <span class="o">+=</span> <span class="mi">100</span>	<span class="o">%</span> <span class="n">adama_score</span> <span class="ow">is</span> <span class="n">now</span> <span class="mf">200.</span> <span class="n">This</span> <span class="n">doesn</span><span class="s">'t change the dictionary value</span><span class="err">
+</span><span class="s">  student_scores['</span><span class="n">Adama</span><span class="s">'] = adama_score		</span><span class="si">% </span><span class="s">the score in the dictionary is now updated</span></code></pre>
+</figure>
+<p>I can’t ask the dictionary for the key associated with a value, but I can get a list of all the keys, and the same for all the values</p>
+<p>我不能向字典詢問與某個值相關的鍵，但是我可以獲得所有鍵的列表，並且所有值都相同</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">all_scores</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+  <span class="n">all_names</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">values</span><span class="p">()</span></code></pre>
+</figure>
+<p>I can use the<span> </span><code class="highlighter-rouge">in</code><span> </span>keyword (just like in lists), do<span> </span><code class="highlighter-rouge">dictionary comprehensions</code><span> </span>like list comprehensions (these are cool, take a look at the<span><span> </span>official bit about these</span>), and iterate over the elements in the dictionary (the syntax is just a little bit different).</p>
+<p>我可以使用in關鍵字（就像在列表中一樣），dictionary comprehensions像列表理解一樣（這些很酷，請看一下有關這些的官方知識），然後遍歷字典中的元素（語法略有不同） 。</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+  	<span class="k">print</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span></code></pre>
+</figure>
+<p>And this prints out pairs of keys and values that look like:<span> </span><code class="highlighter-rouge">(Adama, 100)</code>, etc.</p>
+<p>而這種打印出對項和值樣子的(Adama, 100)等</p>
+<p>Because dictionaries are not ordered, looping through them does not guarantee the key / value pairs coming out in a particular order. So be careful.</p>
+<p>由於字典沒有順序，因此遍歷字典不能保證鍵/值對以特定順序出現。所以要小心</p><h2>24</h2>
 <p>https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html</p>
 <p></p>
 </div>
