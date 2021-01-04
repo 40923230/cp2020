@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='First.html'>First</a><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li class='has-children'><a href='PCH11.html'>PCH11</a><ul class='dropdown'><li><a href='Fiber-Optic Cable.html'>Fiber-Optic Cable</a><li><a href='Twisted Pair Cable.html'>Twisted Pair Cable</a><li><a href='Coaxial Cable.html'>Coaxial Cable</a><li><a href='Copper vs. Fiber.html'>Copper vs. Fiber</a><li><a href='Converters.html'>Converters</a></li></ul><li class='has-children'><a href='PCH14.html'>PCH14</a><ul class='dropdown'><li><a href='Overview.html'>Overview</a><li><a href='TCP and UDP.html'>TCP and UDP</a><li><a href='TCP Vs. UDP.html'>TCP Vs. UDP</a><li><a href='TCP Windowing.html'>TCP Windowing</a><li><a href='TCP IP Stack.html'>TCP IP Stack</a><li><a href='Networking  Transfer Protocols.html'>Networking  Transfer Protocols</a><li><a href='FTP.html'>FTP</a></li></li></ul></ul><li class='has-children'><a href='HW2.html'>HW2</a><ul class='dropdown'><li><a href='1.html'>1</a></li></ul><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li><a href='15.html'>15</a><li><a href='22.html'>22</a><li><a href='24.html'>24</a></li>
+                     <li><a href='First.html'>First</a><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li class='has-children'><a href='PCH11.html'>PCH11</a><ul class='dropdown'><li><a href='Fiber-Optic Cable.html'>Fiber-Optic Cable</a><li><a href='Twisted Pair Cable.html'>Twisted Pair Cable</a><li><a href='Coaxial Cable.html'>Coaxial Cable</a><li><a href='Copper vs. Fiber.html'>Copper vs. Fiber</a><li><a href='Converters.html'>Converters</a></li></ul><li class='has-children'><a href='PCH14.html'>PCH14</a><ul class='dropdown'><li><a href='Overview.html'>Overview</a><li><a href='TCP and UDP.html'>TCP and UDP</a><li><a href='TCP Vs. UDP.html'>TCP Vs. UDP</a><li><a href='TCP Windowing.html'>TCP Windowing</a><li><a href='TCP IP Stack.html'>TCP IP Stack</a><li><a href='Networking  Transfer Protocols.html'>Networking  Transfer Protocols</a><li><a href='FTP.html'>FTP</a></li></li></ul></ul><li class='has-children'><a href='HW2.html'>HW2</a><ul class='dropdown'><li><a href='1.html'>1</a></li></ul><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li><a href='Reverse Word Order.html'>Reverse Word Order</a><li><a href='Read From File.html'>Read From File</a><li><a href='Draw A Game Board.html'>Draw A Game Board</a></li>
                       </ul>
                 </nav>
               </div>
@@ -134,45 +134,15 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">TCP Vs. UDP << <a href='TCP Vs. UDP.html'>Previous</a> <a href='TCP IP Stack.html'>Next</a> >> TCP IP Stack<br /><h1>TCP Windowing</h1>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="section" id="tcp_windowing">
 <div class="sectionContain">
 <p id="N10722" lang="">TCP also supports a concept called windowing. If you have ever copied a file from a network share drive on the Windows operating system, you have seen windowing. Have you ever noticed when you copy a file over the network, it may start out saying there are “2 minutes remaining” until completion, then it jumps up to “3 hours remaining,” then back down to “30 minutes remaining”? This is TCP windowing in action.</p>
 <p lang=""><span>TCP還支持稱為窗口化的概念。</span><span>如果您曾經從Windows操作系統上的網絡共享驅動器中復製過文件，則會看到窗口。</span><span>您是否曾經註意到通過網絡複製文件時，它可能會說“剩餘2分鐘”直到完成，然後跳到“剩餘3小時”，然後又跳回到“剩餘30分鐘”？</span><span>這是TCP窗口在起作用。</span></p>
 <p id="N10725" lang="">Essentially, when a communication session is established with TCP, it first performs the three-way handshake. Next, it starts with a small window size, like windows size 1 in the image below, where a single segment is sent over the network and acknowledged. If this is successful, it increases the window size to 2, sending two segments at a time. It continues to do this, increasing the number of segments each time, transmitting more data in each window until an error occurs and retransmissions must be done. If errors occur, TCP understands that it must have been transmitting too fast, so it shrinks the window to slow down communication. As transmissions occur successfully, it again increases the window to push more data in each window. This window size is continually adjusted to get the most segments per window with the least errors in communication.</p>
-<p id="N10725" lang=""><span>本質上，當使用TCP建立通信會話時，它首先執行三向握手。接下來，它以較小的窗口大小開始，如下面的圖片中的窗口大小1所示，其中單個段通過網絡發送並確認。如果成功，它將窗口大小增加到2，一次發送兩個段。它會繼續這樣做，每次增加段數，在每個窗口中傳輸更多數據，直到發生錯誤並必須重新傳輸為止。如果發生錯誤，TCP知道它一定傳輸速度太快，因此它縮小了窗口以減慢通信速度。隨著傳輸成功進行，它將再次增加窗口以在每個窗口中推送更多數據。</span></p>
-<span class="imagewrap"><span class="imagewrap"><span class="image"><img class="popimg" id="_i_4" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH14/webcontent/PCH14/image3.png"/></span></span></span></div>
+<p id="N10725" lang=""><span>本質上，當使用TCP建立通信會話時，它首先執行三向握手。接下來，它以較小的窗口大小開始，如下面的圖片中的窗口大小1所示，其中單個段通過網絡發送並確認。如果成功，它將窗口大小增加到2，一次發送兩個段。它會繼續這樣做，每次增加段數，在每個窗口中傳輸更多數據，直到發生錯誤並必須重新傳輸為止。如果發生錯誤，TCP知道它一定傳輸速度太快，因此它縮小了窗口以減慢通信速度。隨著傳輸成功進行，它將再次增加窗口以在每個窗口中推送更多數據。</span><img class="popimg" id="_i_4" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH14/webcontent/PCH14/image3.png"/></p>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div>
+<div></div>
 <br />TCP Vs. UDP << <a href='TCP Vs. UDP.html'>Previous</a> <a href='TCP IP Stack.html'>Next</a> >> TCP IP Stack</div>
         
     <!-- footer -->
