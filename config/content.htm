@@ -584,113 +584,113 @@ print(cp1b)</pre>
 <h2>Reverse Word Order</h2>
 <p><span style="color: #ff00ff;">倒序 </span></p>
 <div><i>strings</i></div>
-<div><i><span>弦</span></i></div>
+<div><span style="color: #ff00ff;"><i>弦</i></span></div>
 <p><br/>Exercise 15 (and<span> solution</span>)</p>
 <p><span style="color: #ff00ff;">練習15（和解決方案）</span></p>
 <p>Write a program (using functions!) that asks the user for a long string containing multiple words. Print back to the user the same string, except with the words in backwards order. For example, say I type the string:</p>
-<p><span>編寫一個程序（使用函數！），要求用戶提供包含多個單詞的長字符串。 </span><span>向用戶打印相同的字符串，但單詞順序相反。</span><span>例如，說我鍵入字符串：</span></p>
+<p><span style="color: #ff00ff;">編寫一個程序（使用函數！），要求用戶提供包含多個單詞的長字符串。 向用戶打印相同的字符串，但單詞順序相反。例如，說我鍵入字符串：</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="n">My</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">Michele</span></code></pre>
 </figure>
 <p>Then I would see the string:</p>
-<p><span>然後我會看到字符串：</span></p>
+<p><span style="color: #ff00ff;">然後我會看到字符串：</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="n">Michele</span> <span class="ow">is</span> <span class="n">name</span> <span class="n">My</span></code></pre>
 </figure>
 <p>shown back to me.</p>
-<p><span>顯示給我。</span></p>
+<p><span style="color: #ff00ff;">顯示給我。</span></p>
 <p>Discussion</p>
 <p><span style="color: #ff00ff;">討論區</span></p>
 <p>Concepts for this week:</p>
-<p><span>本週的概念：</span></p>
+<p><span style="color: #ff00ff;">本週的概念：</span></p>
 <ul>
 <li>More string things</li>
-<li><span><span>更弦的東西</span></span></li>
+<li><span style="color: #ff00ff;">更弦的東西</span></li>
 </ul>
 <p>More string things</p>
 <p><span style="color: #ff00ff;">更弦的東西</span></p>
 <p>Python has a lot of interesting things you can do with strings. I will show a few here, but you can see many more methods that may or may not be useful at the<span> official Python documentation about the string format.</span></p>
-<p><span>Python有很多有趣的事情，您可以使用字符串來完成。我將在這裡展示一些方法，但是您可以在關於字符串格式的官方Python文檔中</span><span><span>看到更多可能有用或可能沒有用的方法</span><span>。</span></span></p>
+<p><span style="color: #ff00ff;">Python有很多有趣的事情，您可以使用字符串來完成。我將在這裡展示一些方法，但是您可以在關於字符串格式的官方Python文檔中看到更多可能有用或可能沒有用的方法。</span></p>
 <p>Remember that<span> strings are lists</span>.</p>
-<p><span>請記住，字符串是列表</span><span><span>。</span></span></p>
+<p><span style="color: #ff00ff;">請記住，字符串是列表。</span></p>
 <p>Splitting strings</p>
 <p><span style="color: #ff00ff;">分割字符串</span></p>
 <p>You can “split” or tear apart strings based on a given set of characters. For example:</p>
-<p><span>您可以根據給定的字符集“拆分”或拆分字符串。</span><span>例如：</span></p>
+<p><span style="color: #ff00ff;">您可以根據給定的字符集“拆分”或拆分字符串。例如：</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="n">teststring</span> <span class="o">=</span> <span class="s">"this is a test"</span>
   <span class="n">result</span> <span class="o">=</span> <span class="n">teststring</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">"t"</span><span class="p">)</span></code></pre>
 </figure>
 <p>And at the end,<span> </span><code class="highlighter-rouge">result</code><span> </span>will contain the list:</p>
-<p><span>最後，</span><code class="highlighter-rouge">result</code><span><span>將包含列表：</span></span></p>
+<p><span style="color: #ff00ff;">最後，<code class="highlighter-rouge">result</code>將包含列表：</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="p">[</span><span class="s">''</span><span class="p">,</span> <span class="s">'his is a '</span><span class="p">,</span> <span class="s">'es'</span><span class="p">,</span> <span class="s">''</span><span class="p">]</span></code></pre>
 </figure>
 <p>Instead of<span> </span><code class="highlighter-rouge">"t"</code>, you can write any character you want. If you do not include any character, it means “split on all whitespace”:</p>
-<p><span>除了</span><code class="highlighter-rouge">"t"</code><span><span>，您可以編寫任何所需的字符。</span><span>如果您不包含任何字符，則表示“在所有空格上分割”：</span></span></p>
+<p><span style="color: #ff00ff;">除了<code class="highlighter-rouge">"t"</code>，您可以編寫任何所需的字符。如果您不包含任何字符，則表示“在所有空格上分割”：</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="n">teststring</span> <span class="o">=</span> <span class="s">"  this      has a lot    of   spaces and    tabs"</span>
   <span class="n">result</span> <span class="o">=</span> <span class="n">testring</span><span class="o">.</span><span class="n">split</span><span class="p">()</span></code></pre>
 </figure>
 <p>Then<span> </span><code class="highlighter-rouge">result</code><span> </span>contains:</p>
-<p><span>然後</span><code class="highlighter-rouge">result</code><span><span>包含：</span></span></p>
+<p><span style="color: #ff00ff;">然後<code class="highlighter-rouge">result</code>包含：</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="p">[</span><span class="s">'this'</span><span class="p">,</span> <span class="s">'has'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="s">'lot'</span><span class="p">,</span> <span class="s">'of'</span><span class="p">,</span> <span class="s">'spaces'</span><span class="p">,</span> <span class="s">'and'</span><span class="p">,</span> <span class="s">'tabs'</span><span class="p">]</span></code></pre>
 </figure>
 <p>Joining strings</p>
 <p><span style="color: #ff00ff;">連接字符串</span></p>
 <p>You can also relatively easily “join” or “smush” strings together:</p>
-<p><span>您還可以相對容易地將字符串“連接”或“混入”：</span></p>
+<p><span style="color: #ff00ff;">您還可以相對容易地將字符串“連接”或“混入”：</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="n">listofstrings</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">]</span>
   <span class="n">result</span> <span class="o">=</span> <span class="s">"**"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">listofstrings</span><span class="p">)</span></code></pre>
 </figure>
 <p>Then<span> </span><code class="highlighter-rouge">result</code><span> </span>will contain the string:</p>
-<p><span>然後</span><code class="highlighter-rouge">result</code><span><span>將包含字符串：</span></span></p>
+<p><span style="color: #ff00ff;">然後<code class="highlighter-rouge">result</code>將包含字符串：</span></p>
 <figure class="highlight">
 <pre><code class="language-pycon" data-lang="pycon">  a**b**c</code></pre>
 </figure>
 <h2>Read From File</h2>
-<div><i><span>從文件讀取<span> </span></span></i></div>
+<div><span style="color: #ff00ff;"><i>從文件讀取 </i></span></div>
 <p>Exercise 22 (and<span> Solution</span>)</p>
-<p>練習22（和解決方案）</p>
+<p><span style="color: #ff00ff;">練習22（和解決方案）</span></p>
 <p>Given a<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file that has a list of a bunch of names, count how many of each name there are in the file, and print out the results to the screen. I have a<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file for you, if you want to<span> use it</span>!</p>
-<p>給定一個.txt包含一堆名稱列表的文件，請計算該文件中每個名稱的數量，然後將結果打印到屏幕上。.txt如果您想使用它，我有一個文件供您使用！</p>
+<p><span style="color: #ff00ff;">給定一個.txt包含一堆名稱列表的文件，請計算該文件中每個名稱的數量，然後將結果打印到屏幕上。.txt如果您想使用它，我有一個文件供您使用！</span></p>
 <p>Extra</p>
-<p>額外</p>
+<p><span style="color: #ff00ff;">額外</span></p>
 <ul>
 <li>Instead of using the<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file from above (or instead of, if you want the challenge), take<span> this .txt file</span>, and count how many of each “category” of each image there are. This text file is actually a list of files corresponding to the<span> SUN database</span><span> </span>scene recognition database, and lists the file directory hierarchy for the images. Once you take a look at the first line or two of the file, it will be clear which part represents the scene category. To do this, you’re going to have to remember a bit about string parsing in Python 3. I talked a little bit about it<span> in this post.</span></li>
 </ul>
-<p>不要使用.txt上面的文件（或者，如果您想挑戰，也可以使用該.txt文件），請使用此文件，併計算每個圖像的每個“類別”有多少個。該文本文件實際上是與SUN數據庫場景識別數據庫相對應的文件的列表，並且列出了圖像的文件目錄層次結構。查看文件的第一行或第二行後，將很清楚哪個部分代表場景類別。為此，您需要記住一些有關Python 3中的字符串解析的知識。我在本文中對此進行了一些討論。</p>
+<p><span style="color: #ff00ff;">不要使用.txt上面的文件（或者，如果您想挑戰，也可以使用該.txt文件），請使用此文件，併計算每個圖像的每個“類別”有多少個。該文本文件實際上是與SUN數據庫場景識別數據庫相對應的文件的列表，並且列出了圖像的文件目錄層次結構。查看文件的第一行或第二行後，將很清楚哪個部分代表場景類別。為此，您需要記住一些有關Python 3中的字符串解析的知識。我在本文中對此進行了一些討論。</span></p>
 <p>Discussion</p>
-<p><span>討論區</span></p>
+<p><span style="color: #ff00ff;">討論區</span></p>
 <p>Topics</p>
-<p>主題</p>
+<p><span style="color: #ff00ff;">主題</span></p>
 <ol>
 <li>Reading a file</li>
 <li>Dictionaries</li>
 </ol>
-<p>1.讀取文件<br/>2.辭典</p>
+<p><span style="color: #ff00ff;">1.讀取文件</span><br/><span style="color: #ff00ff;">2.辭典</span></p>
 <p>Reading a File</p>
-<p>讀取文件</p>
+<p><span style="color: #ff00ff;">讀取文件</span></p>
 <p>Reading a file is very analogous to writing a file, as<span><span> </span>I discussed before in Exercise 21.</span> But, the best source is always the<span><span> </span>official Python 3.3 documentation.</span></p>
-<p><span>正如我之前在練習21中所討論的，讀取文件與寫入文件非常相似。但是，最好的來源始終是官方的Python 3.3文檔。</span></p>
-<p>Simply, reading to a file takes two steps<br/>簡單來說，讀取文件需要兩個步驟</p>
+<p><span style="color: #ff00ff;">正如我之前在練習21中所討論的，讀取文件與寫入文件非常相似。但是，最好的來源始終是官方的Python 3.3文檔。</span></p>
+<p>Simply, reading to a file takes two steps<br/><span style="color: #ff00ff;">簡單來說，讀取文件需要兩個步驟</span></p>
 <ol>
 <li>Opening the file for reading</li>
 <li>Read!</li>
 </ol>
-<p>1.打開文件進行讀取<br/>2.讀取！</p>
+<p><span style="color: #ff00ff;">1.打開文件進行讀取</span><br/><span style="color: #ff00ff;">2.讀取！</span></p>
 <p>Opening a file for reading is the same as opening for writing, just using a different flag</p>
-<p>打開文件進行讀取與打開文件相同，只是使用一個不同的標誌</p>
+<p><span style="color: #ff00ff;">打開文件進行讀取與打開文件相同，只是使用一個不同的標誌</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
     <span class="n">all_text</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></code></pre>
 </figure>
 <p>Note how the<span> </span><code class="highlighter-rouge">'r'</code><span> </span>flag stands for “read”. The code sample from above reads the entire<span> </span><code class="highlighter-rouge">open_file</code><span> </span>all at once into the<span> </span><code class="highlighter-rouge">all_text</code><span> </span>variable. But, this means that we now have a long string in<span> </span><code class="highlighter-rouge">all_text</code><span> </span>that can then be manipulated in Python using any string methods you want.</p>
-<p>請注意該'r'標誌代表“已讀”。上面的代碼示例open_file一次將全部讀取到了all_text變量中。但是，這意味著我們現在有了一個長字符串all_text，然後可以使用所需的任何字符串方法在Python中對其進行操作。</p>
+<p><span style="color: #ff00ff;">請注意該'r'標誌代表“已讀”。上面的代碼示例open_file一次將全部讀取到了all_text變量中。但是，這意味著我們現在有了一個長字符串all_text，然後可以使用所需的任何字符串方法在Python中對其進行操作。</span></p>
 <p>Another way of reading data from the file is line by line</p>
-<p>從文件讀取數據的另一種方法是逐行</p>
+<p><span style="color: #ff00ff;">從文件讀取數據的另一種方法是逐行</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
   	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
@@ -699,47 +699,47 @@ print(cp1b)</pre>
     	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span></code></pre>
 </figure>
 <p>Instead of<span> </span><code class="highlighter-rouge">print(line)</code>, you can imagine doing anything you want to the line of text… If you save it to a variable, you have a string that you can then use something like<span> </span><code class="highlighter-rouge">.strip()</code><span> </span>or<span> </span><code class="highlighter-rouge">.split()</code><span> </span>with.</p>
-<p>而不是print(line)，您可以想像對文本行進行任何操作...如果將其保存到變量中，則可以有一個字符串，然後可以使用諸如.strip()或.split()with之類的東西。</p>
+<p><span style="color: #ff00ff;">而不是print(line)，您可以想像對文本行進行任何操作...如果將其保存到變量中，則可以有一個字符串，然後可以使用諸如.strip()或.split()with之類的東西。</span></p>
 <p>Dictionaries</p>
-<p>辭典</p>
+<p><span style="color: #ff00ff;">辭典</span></p>
 <p>Dictionaries are Python’s way of associating two pieces of data together. The<span><span> </span>official documentation says it all.</span></p>
-<p><span>字典是Python將兩種數據關聯在一起的方式。在官方文件說明了一切。</span></p>
+<p><span style="color: #ff00ff;">字典是Python將兩種數據關聯在一起的方式。在官方文件說明了一切。</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="n">student_scores</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Adama'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'Starbuck'</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span> <span class="s">'Apollo'</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s">'Athena'</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s">'Agathon'</span><span class="p">:</span> <span class="mi">90</span><span class="p">}</span></code></pre>
 </figure>
 <p>The strings (or whatever happens to the left of the<span> </span><code class="highlighter-rouge">:</code><span> </span>sign), are called<span> </span><code class="highlighter-rouge">keys</code>. When I want to access the<span> </span><code class="highlighter-rouge">values</code><span> </span>(the things to the right of the<span> </span><code class="highlighter-rouge">:</code><span> </span>sign), I need to ask the dictionary for the value associated with the key</p>
-<p>字符串（或:符號左側發生的任何事情）稱為keys。當我想訪問values（:符號右邊的東西）時，我需要向字典查詢與該鍵關聯的值</p>
+<p><span style="color: #ff00ff;">字符串（或:符號左側發生的任何事情）稱為keys。當我想訪問values（:符號右邊的東西）時，我需要向字典查詢與該鍵關聯的值</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span></code></pre>
 </figure>
 <p>You can then modify the score and save it back to the dictionary</p>
-<p>然後，您可以修改分數並將其保存回字典</p>
+<p><span style="color: #ff00ff;">然後，您可以修改分數並將其保存回字典</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span>
   <span class="n">adama_score</span> <span class="o">+=</span> <span class="mi">100</span>	<span class="o">%</span> <span class="n">adama_score</span> <span class="ow">is</span> <span class="n">now</span> <span class="mf">200.</span> <span class="n">This</span> <span class="n">doesn</span><span class="s">'t change the dictionary value</span><span class="err">
 </span><span class="s">  student_scores['</span><span class="n">Adama</span><span class="s">'] = adama_score		</span><span class="si">% </span><span class="s">the score in the dictionary is now updated</span></code></pre>
 </figure>
 <p>I can’t ask the dictionary for the key associated with a value, but I can get a list of all the keys, and the same for all the values</p>
-<p>我不能向字典詢問與某個值相關的鍵，但是我可以獲得所有鍵的列表，並且所有值都相同</p>
+<p><span style="color: #ff00ff;">我不能向字典詢問與某個值相關的鍵，但是我可以獲得所有鍵的列表，並且所有值都相同</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="n">all_scores</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
   <span class="n">all_names</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">values</span><span class="p">()</span></code></pre>
 </figure>
 <p>I can use the<span> </span><code class="highlighter-rouge">in</code><span> </span>keyword (just like in lists), do<span> </span><code class="highlighter-rouge">dictionary comprehensions</code><span> </span>like list comprehensions (these are cool, take a look at the<span><span> </span>official bit about these</span>), and iterate over the elements in the dictionary (the syntax is just a little bit different).</p>
-<p>我可以使用in關鍵字（就像在列表中一樣），dictionary comprehensions像列表理解一樣（這些很酷，請看一下有關這些的官方知識），然後遍歷字典中的元素（語法略有不同） 。</p>
+<p><span style="color: #ff00ff;">我可以使用in關鍵字（就像在列表中一樣），dictionary comprehensions像列表理解一樣（這些很酷，請看一下有關這些的官方知識），然後遍歷字典中的元素（語法略有不同） 。</span></p>
 <figure class="highlight">
 <pre><code class="language-python" data-lang="python">  <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
   	<span class="k">print</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span></code></pre>
 </figure>
 <p>And this prints out pairs of keys and values that look like:<span> </span><code class="highlighter-rouge">(Adama, 100)</code>, etc.</p>
-<p>而這種打印出對項和值樣子的(Adama, 100)等</p>
+<p><span style="color: #ff00ff;">而這種打印出對項和值樣子的(Adama, 100)等</span></p>
 <p>Because dictionaries are not ordered, looping through them does not guarantee the key / value pairs coming out in a particular order. So be careful.</p>
-<p>由於字典沒有順序，因此遍歷字典不能保證鍵/值對以特定順序出現。所以要小心</p>
+<p><span style="color: #ff00ff;">由於字典沒有順序，因此遍歷字典不能保證鍵/值對以特定順序出現。所以要小心</span></p>
 <h2>Draw A Game Board</h2>
-<p>畫遊戲板 <br/>Exercise 24 (and Solution)<br/>練習24（和解決方案）<br/>This exercise is Part 1 of 4 of the Tic Tac Toe exercise series. The other exercises are: Part 2, Part 3, and Part 4.<br/>此練習是Tic Tac Toe練習系列4的第1部分。其他練習是：第2部分，第3部分和第4部分。<br/>Time for some fake graphics! Let’s say we want to draw game boards that look like this:<br/>是時候購買一些假圖形了！假設我們要繪製如下游戲板：<br/> --- --- --- <br/>| | | | <br/> --- --- --- <br/>| | | | <br/> --- --- --- <br/>| | | | <br/> --- --- --- <br/>This one is 3x3 (like in tic tac toe). Obviously, they come in many other sizes (8x8 for chess, 19x19 for Go, and many more).<br/>這是3x3（就像井字遊戲一樣）。顯然，它們有許多其他尺寸（國際象棋為8x8，圍棋為19x19等）。<br/>Ask the user what size game board they want to draw, and draw it for them to the screen using Python’s print statement.<br/>詢問用戶他們要繪製什麼尺寸的遊戲板，並使用Python的print語句將其繪製到屏幕上。<br/>Remember that in Python 3, printing to the screen is accomplished by<br/>請記住，在Python 3中，打印到屏幕是通過以下方式完成的：<br/> print("Thing to show on screen")<br/>Hint: this requires some use of functions, as were discussed previously on this blog and elsewhere on the Internet, like this TutorialsPoint link.<br/>提示：這需要某種功能的使用，如本博客之前和Internet上其他地方所討論的，例如TutorialsPoint鏈接。<br/>Topics and links for more information<br/>主題和鏈接，以獲取更多信息<br/>The main topic of this exercise is functions. They are tricky, and deserve lots of practice and thought. Here are a few links in case you want some more reading.<br/>本練習的主要主題是功能。它們很棘手，值得大量實踐和思考。這裡有一些鏈接，以備您需要更多閱讀。<br/>1.Functions on TutorialsPoint</p>
-<p>1.TutorialsPoint上的功能<br/>2.Hands-on Python, by Loyola University</p>
-<p>2.Loyola University的動手Python<br/>3.Learn Python the Hard Way</p>
-<p>3.艱苦學習Python<br/>4.ZetCode<br/>4.郵遞區號<br/>There are hundreds more out there - read and practice away!<br/>那裡還有數百個-閱讀和練習吧！</p>
+<p><span style="color: #ff00ff;">畫遊戲板 </span><br/>Exercise 24 (and Solution)<br/><span style="color: #ff00ff;">練習24（和解決方案）</span><br/>This exercise is Part 1 of 4 of the Tic Tac Toe exercise series. The other exercises are: Part 2, Part 3, and Part 4.<br/><span style="color: #ff00ff;">此練習是Tic Tac Toe練習系列4的第1部分。其他練習是：第2部分，第3部分和第4部分。</span><br/>Time for some fake graphics! Let’s say we want to draw game boards that look like this:<br/><span style="color: #ff00ff;">是時候購買一些假圖形了！假設我們要繪製如下游戲板：</span><br/> --- --- --- <br/>| | | | <br/> --- --- --- <br/>| | | | <br/> --- --- --- <br/>| | | | <br/> --- --- --- <br/>This one is 3x3 (like in tic tac toe). Obviously, they come in many other sizes (8x8 for chess, 19x19 for Go, and many more).<br/><span style="color: #ff00ff;">這是3x3（就像井字遊戲一樣）。顯然，它們有許多其他尺寸（國際象棋為8x8，圍棋為19x19等）。</span><br/>Ask the user what size game board they want to draw, and draw it for them to the screen using Python’s print statement.<br/><span style="color: #ff00ff;">詢問用戶他們要繪製什麼尺寸的遊戲板，並使用Python的print語句將其繪製到屏幕上。</span><br/>Remember that in Python 3, printing to the screen is accomplished by<br/><span style="color: #ff00ff;">請記住，在Python 3中，打印到屏幕是通過以下方式完成的：</span><br/> print("Thing to show on screen")<br/>Hint: this requires some use of functions, as were discussed previously on this blog and elsewhere on the Internet, like this TutorialsPoint link.<br/><span style="color: #ff00ff;">提示：這需要某種功能的使用，如本博客之前和Internet上其他地方所討論的，例如TutorialsPoint鏈接。</span><br/>Topics and links for more information<br/><span style="color: #ff00ff;">主題和鏈接，以獲取更多信息</span><br/>The main topic of this exercise is functions. They are tricky, and deserve lots of practice and thought. Here are a few links in case you want some more reading.<br/><span style="color: #ff00ff;">本練習的主要主題是功能。它們很棘手，值得大量實踐和思考。這裡有一些鏈接，以備您需要更多閱讀。</span><br/>1.Functions on TutorialsPoint</p>
+<p><span style="color: #ff00ff;">1.TutorialsPoint上的功能</span><br/>2.Hands-on Python, by Loyola University</p>
+<p><span style="color: #ff00ff;">2.Loyola University的動手Python</span><br/>3.Learn Python the Hard Way</p>
+<p><span style="color: #ff00ff;">3.艱苦學習Python</span><br/>4.ZetCode<br/><span style="color: #ff00ff;">4.郵遞區號</span><br/>There are hundreds more out there - read and practice away!<br/><span style="color: #ff00ff;">那裡還有數百個-閱讀和練習吧！</span></p>
 <h1>BUG</h1>
 <p>github 上傳沒有綠勾</p>
 <p>1.刪除<strong><span> </span>tmp/cp2020/cmsimde</strong></p>
